@@ -142,7 +142,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 If you have any questions or feedback, feel free to contact:
 
-- **Aakash S **: [aakashpc123@gmail.com](mailto\:aakashpc123@gmail.com)
+- **Aakash S**: [aakashpc123@gmail.com](mailto\:aakashpc123@gmail.com)
 - GitHub: [@aakash10802](https://github.com/aakash10802)
 
 ---

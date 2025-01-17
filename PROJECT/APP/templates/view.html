@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        {% for i in var %}
+            <li>
+                <!-- Display Photograph -->
+                <a href="#">
+                    <img src="{{ i.photo.url }}" width="200">
+                </a><br>
+    
+                <!-- Display Signature -->
+                <a href="#">
+                    <img src="{{ i.sign.url }}" width="200">
+                </a><br>
+
+    
+                <!-- Display Resume (if it exists) -->
+                {% if i.resume %}
+                    {% if i.resume.name|slice:"-4" == ".pdf" %}
+                        <h3>Resume:</h3>
+                        <embed src="{{ i.resume.url }}" width="600" height="400" type="application/pdf">
+                    <!-- {% elif i.resume.name|slice:"-4" == ".jpg" or i.resume.name|slice:"-4" == ".png" or i.resume.name|slice:"-5" == ".jpeg" %}
+                        <h3>Resume:</h3>
+                        <img src="{{ i.resume.url }}" width="600" alt="Resume Image">
+                    {% else %}
+                        <p>File preview not available. <a href="{{ i.resume.url }}" target="_blank">Download Resume</a></p> -->
+                    {% endif %}
+                {% else %}
+                    <p>No resume uploaded</p>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+      
+</body>
+</html>
